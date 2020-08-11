@@ -12,6 +12,6 @@ do
  	controller=$(basename $(dirname $deviceLink))
  	bdf=$(basename $(dirname $(dirname $(dirname $deviceLink))))
  	physicalSlot=$(lspci -v -s $bdf| awk '/Physical Slot:/{print $3}')
- 	echo "Physical Slot for the Block Device \"$i\" with Serial \"$serial\" under NVMe Contoller-\"$controller\" = \"$physicalSlot\""
+ 	echo "Physical Slot for the Block Device \"$i\" with Serial \"$serial\" under NVMe Contoller-\"$controller\" with BDF:\"$bdf\" = \"$physicalSlot\""
 
 done
