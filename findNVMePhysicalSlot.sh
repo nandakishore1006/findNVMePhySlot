@@ -1,5 +1,4 @@
 #!/bin/bash
-# Pre Requisite: nvme-cli should be installed
 substring='virtual'
 for i in $(ls /sys/block/| grep -i nvme)
 do
